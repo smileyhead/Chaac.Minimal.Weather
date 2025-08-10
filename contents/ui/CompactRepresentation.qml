@@ -141,6 +141,9 @@ Item {
             }
         }
     }
+    Component.onCompleted: {
+        width = initial.width
+    }
 
 }
 
