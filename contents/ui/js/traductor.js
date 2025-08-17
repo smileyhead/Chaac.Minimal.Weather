@@ -369,7 +369,7 @@ function weatherShortText(languageCode, code) {
     if (descriptions[languageCode]) {
         return descriptions[languageCode][code] || "Unknown";
     } else {
-        return "Language not supported";
+        return descriptions["en"][code];
     }
 }
 
@@ -661,7 +661,7 @@ function weatherLongText(languageCode, code) {
     if (descriptions[languageCode]) {
         return descriptions[languageCode][code] || "Unknown";
     } else {
-        return "Language not supported";
+        return descriptions["en"][code];
     }
 }
 function rainProbabilityText(languageCode) {
@@ -784,7 +784,7 @@ function lavelUV(languageCode, lavel) {
     if (translations[languageCode]) {
         return translations[languageCode][lavel] || "Unknown";
     } else {
-        return "Language not supported";
+        return translations["en"][lavel];
     }
 }
 
