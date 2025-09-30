@@ -41,7 +41,7 @@ ColumnLayout {
             spacing: 0
             PlasmaComponents3.Label {
                 id: temperatura
-                text: temperatureUnit === 0 ? Math.round(weatherData.temperaturaActual) + "°C" : Math.round(weatherData.temperaturaActual) + "°F"
+                text: temperatureUnit === 0 ? weatherData.temperaturaActual + "°C" : weatherData.temperaturaActual + "°F"
                 width: parent.width
                 font.pixelSize: currentWeather.height * 0.4
                 horizontalAlignment: Text.AlignHCenter
