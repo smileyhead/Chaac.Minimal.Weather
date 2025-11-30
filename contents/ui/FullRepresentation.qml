@@ -35,6 +35,7 @@ ColumnLayout {
         width: parent.width
         height: parent.height / 2
         Column {
+            id: currentSection
             width: longweathertext.implicitWidth < temperatura.implicitWidth ? temperatura.implicitWidth : longweathertext.implicitWidth
             height: temperatura.implicitHeight + longweathertext.implicitHeight
             anchors.centerIn: currentWeather
@@ -59,6 +60,9 @@ ColumnLayout {
                 font.pixelSize: currentWeather.height * .09
                 horizontalAlignment: Text.AlignHCenter
             }
+        }
+        Component.onCompleted: {
+            fullweather.height = currentSection.implicitHeight * 2
         }
     }
 
